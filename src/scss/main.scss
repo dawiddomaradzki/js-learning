@@ -37,18 +37,21 @@ body {
   border-radius: 8px;
 }
 
-.basicTasks__button {
+.button {
 text-align: center;
-}
 
-.basicTasks__exercise {
-  line-height: 1.5rem;
-}
-
-.promptButton {
+&__click {
   font-weight: 600;
   font-size: 1.5rem;
   width: 112px;
   height: 48px;
   border-radius: 24px;
 }
+}
+
+.exercise {
+  line-height: 1.5rem;
+}
+
+
+
