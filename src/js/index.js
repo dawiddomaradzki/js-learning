@@ -8,6 +8,17 @@ import '../scss/main.scss';
 
 console.log('HELLO 🚀')
 
+// basic strings task #1
+const quantity = document.querySelector('.button__stringsTask1--js');
+const element = document.getElementById('exercise__one');
+
+quantity.addEventListener('click', (e) => {
+    const text = element.innerText.split(" ");
+    console.log(text);
+    console.log(text.length);
+
+});
+
 // basic strings task #2
 
 const greeting = document.querySelector('.button__stringsTask2--js');
