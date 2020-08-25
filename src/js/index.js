@@ -9,11 +9,11 @@ import '../scss/main.scss';
 console.log('HELLO 🚀')
 
 // basic strings task #1 // Wyliczenie ilości słów w tekście
-const quantity = document.querySelector('.button__stringsTask1--js');
-const element = document.getElementById('exercise__one');
+const stringsTask1 = document.querySelector('.button__stringsTask1--js');
+var element1 = document.getElementById('exerciseOne');
 
-quantity.addEventListener('click', (e) => {
-    const text = element.innerText.split(" ");
+stringsTask1.addEventListener('click', (e) => {
+    const text = element1.innerText.split(" ");
     console.log(text);
     console.log(text.length);
 
@@ -51,3 +51,23 @@ function processUserName(userInput) {
 
     return splitedName.join(' ');
 }
+
+// basic strings task #3 // sprawdzanie występowania słowa w zdaniu
+
+const stringsTask3 = document.querySelector('.button__stringsTask3--js');
+var element3 = document.getElementById('exerciseThree');
+
+stringsTask3.addEventListener('click', (e) => {
+ const text3 = element3.innerText.split('chcesz').length - 1;
+
+if (text3 > -1) {
+    console.log(`Zdanie zawiera ${text3} słowa "chcesz"`);
+}
+
+else {
+
+    console.log(`Zdanie nie zawiera słowa "chcesz"`);
+}
+});
+
+
