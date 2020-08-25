@@ -70,4 +70,7 @@ else {
 }
 });
 
+// basic strings task #4 // wypisywanie tekstu w konsoli w różnej konfiguracji
+
+
 
