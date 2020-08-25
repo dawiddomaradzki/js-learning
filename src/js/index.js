@@ -8,7 +8,7 @@ import '../scss/main.scss';
 
 console.log('HELLO 🚀')
 
-// basic strings task #1
+// basic strings task #1 // Wyliczenie ilości słów w tekście
 const quantity = document.querySelector('.button__stringsTask1--js');
 const element = document.getElementById('exercise__one');
 
@@ -19,7 +19,7 @@ quantity.addEventListener('click', (e) => {
 
 });
 
-// basic strings task #2
+// basic strings task #2 // przywitanie za pomocą prompt i powiększenie pierwszej litery w kazdym slowie
 
 const greeting = document.querySelector('.button__stringsTask2--js');
 
