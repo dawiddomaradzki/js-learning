@@ -72,5 +72,27 @@ else {
 
 // basic strings task #4 // wypisywanie tekstu w konsoli w różnej konfiguracji
 
+const stringsTask4 = document.querySelector('.button__stringsTask4--js')
+var element4 = document.getElementById('exerciseFour').innerText;
+
+
+
+function alternate (element4) {
+    const smallLetters = element4.toLowerCase().split('');
+
+for (let i = 0; i < smallLetters.length; i += 2) {
+    smallLetters[i] = smallLetters[i].toUpperCase();
+}
+
+return smallLetters.join('');
+};
+
+stringsTask4.addEventListener ('click', (e) => {
+    console.log(element4.toLowerCase());
+    console.log(element4.toUpperCase());
+    console.log(alternate(element4));
+    console.log(element4.replace('dont','do not'));
+    
+});
 
 

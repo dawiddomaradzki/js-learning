@@ -2,7 +2,7 @@
 
 @import "_variables";
 @import "modules/hello.scss";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
 html {
   box-sizing: border-box;
@@ -24,6 +24,7 @@ body {
   align-content: center;
   flex-flow: column wrap;
   min-height: 100vh;
+  line-height: 1.5rem;
 }
 
 .tasks {
@@ -38,23 +39,17 @@ body {
 }
 
 .button {
-text-align: center;
+  text-align: center;
 
-&__click {
-  font-weight: 600;
-  font-size: 1.5rem;
-  width: 112px;
-  height: 48px;
-  border-radius: 24px;
-}
-}
-
-.exercise {
-  line-height: 1.5rem;
+  &__click {
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: 112px;
+    height: 48px;
+    border-radius: 24px;
+  }
 }
 
 code {
   background-color: rgba(255, 255, 255, 0.15);
 }
-
-
