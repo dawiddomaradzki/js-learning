@@ -95,4 +95,11 @@ stringsTask4.addEventListener ('click', (e) => {
     
 });
 
+// basic strings task #5 // zmienne losowe za pomocą MATH
+
+const stringsTask5 = document.querySelector('.button__stringsTask5--js');
+
+
+
+
 
