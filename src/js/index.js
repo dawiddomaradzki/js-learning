@@ -118,3 +118,22 @@ stringsTask5.addEventListener('click' , (e) => {
     
 });
 
+// basic strings task #6 // Wygeneruj pod zmienną uniqueID tekst będący losowym ciągiem liter i cyfr o długości 20 znaków.
+
+const stringsTask6 = document.querySelector('.button__stringsTask6--js');
+
+const allCharacters = "0123456789abcdefghijklmnoprstuwxyz";
+
+function randomCharacters() {
+    
+    let uniqueID = "";
+    for (let i = 0; i < 20; i++) {
+       uniqueID += allCharacters[Math.floor(Math.random() * 34)]; 
+    }
+
+    return uniqueID;
+}
+
+stringsTask6.addEventListener ('click' , (e) => {
+    console.log(randomCharacters());
+});
