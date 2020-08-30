@@ -99,7 +99,22 @@ stringsTask4.addEventListener ('click', (e) => {
 
 const stringsTask5 = document.querySelector('.button__stringsTask5--js');
 
+const min = 10;
+const max = 100000;
 
+function randomNumber() {
+    
+    const result = Math.floor(Math.random() * (max - min + 1) + min);
+    return result.toString().padStart(10, ".");
+}
 
-
+stringsTask5.addEventListener('click' , (e) => {
+    
+    console.log(randomNumber());
+    console.log(randomNumber());
+    console.log(randomNumber());
+    console.log(randomNumber());
+    console.log(randomNumber());
+    
+});
 
