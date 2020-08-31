@@ -137,3 +137,6 @@ function randomCharacters() {
 stringsTask6.addEventListener ('click' , (e) => {
     console.log(randomCharacters());
 });
+
+// basic strings task #7 // Stwórz zmienną x równą jakiejś wartości liczbowej. Następnie wypisz w konsoli tekst: Liczba x * x da w wyniku x * x Gdzie w odpowiednie miejsca wstawisz zmienną x i wynik działania.
+
