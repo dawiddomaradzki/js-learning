@@ -140,3 +140,12 @@ stringsTask6.addEventListener ('click' , (e) => {
 
 // basic strings task #7 // Stwórz zmienną x równą jakiejś wartości liczbowej. Następnie wypisz w konsoli tekst: Liczba x * x da w wyniku x * x Gdzie w odpowiednie miejsca wstawisz zmienną x i wynik działania.
 
+
+const stringsTask7 = document.querySelector('.button__stringsTask7--js');
+
+let varX = 7;
+
+stringsTask7.addEventListener('click', (e) => {
+
+    console.log(`Liczba ${varX} * ${varX} da w wyniku ${varX * varX}`);
+});
