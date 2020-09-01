@@ -149,3 +149,7 @@ stringsTask7.addEventListener('click', (e) => {
 
     console.log(`Liczba ${varX} * ${varX} da w wyniku ${varX * varX}`);
 });
+
+// basic loops task #1 // Za pomocą pętli wypisz w konsoli tekst 12345678910
+
+const loopsTask1 = document.querySelector('.button__loopsTask1--js');
