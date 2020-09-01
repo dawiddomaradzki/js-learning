@@ -153,3 +153,13 @@ stringsTask7.addEventListener('click', (e) => {
 // basic loops task #1 // Za pomocą pętli wypisz w konsoli tekst 12345678910
 
 const loopsTask1 = document.querySelector('.button__loopsTask1--js');
+
+loopsTask1.addEventListener('click', (e) => {
+
+    let loopNumber = "";
+    for (let i = 1; i < 11; i++) {
+        loopNumber += i;
+    }
+
+    console.log(loopNumber);
+});
