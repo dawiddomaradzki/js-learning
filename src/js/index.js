@@ -163,3 +163,30 @@ loopsTask1.addEventListener('click', (e) => {
 
     console.log(loopNumber);
 });
+
+// basic loops task #2 // Stwórz zmienną n, pod którą postawisz jakąś liczbę całkowitą z przedziału 1-10 oraz dodatkową zmienną txt, która będzie zawierać jakiś tekst np. kot.
+
+const loopsTask2 = document.querySelector('.button__loopsTask2--js');
+
+let loopNumber2 = 6;
+let loopText2 = "Tekst";
+
+
+loopsTask2.addEventListener('click', (e) => {
+
+    let replication = '';
+    for (let i = 0; i < loopNumber2; i++) {
+        replication += loopText2;
+    }
+
+
+    if (loopNumber2 > 0) {
+        console.log(loopText2.repeat(loopNumber2));
+        console.log(replication);
+    }
+
+    else {
+        console.log('podana liczba jest mniejsza od 0')
+    }
+ 
+});
