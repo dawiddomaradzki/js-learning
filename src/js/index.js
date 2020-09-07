@@ -190,3 +190,38 @@ loopsTask2.addEventListener('click', (e) => {
     }
  
 });
+
+// basic loops task #3 // Wygeneruj i wypisz w konsoli tekst:
+
+const loopsTask3 = document.querySelector('.button__loopsTask3--js');
+
+
+loopsTask3.addEventListener('click', (e) => {
+    let inputPrompt = cutting();
+    const returnInput = `╔═══════════════════════════════════════╗
+           ${inputPrompt}               
+╚═══════════════════════════════════════╝`;
+    console.log(returnInput);
+});
+
+
+function cutting (){
+
+    let input = prompt(`Podaj tekst`);
+
+    if (input.length > 10) {
+        const slicedInput = input.slice(0,10);
+        return slicedInput + `...`;
+    }
+
+    return input;
+};
+
+// basic loops task #4 // Zrób losowanie 10 liczb z przedziału 1-10. 
+
+const loopsTask4 = document.querySelector('.button__loopsTask4--js');
+
+
+
+
+
