@@ -221,6 +221,41 @@ function cutting (){
 
 const loopsTask4 = document.querySelector('.button__loopsTask4--js');
 
+const allNumbers = "0123456789";
+
+
+function randomNumbers() {
+
+    let randomNumber = "";
+    for (let i = 0; i < 10; i++) {
+        randomNumber += allNumbers[Math.floor(Math.random() * 10)];
+    }
+
+    return randomNumber;
+};
+
+loopsTask4.addEventListener('click', (e) => {
+    var separatedNumbers = randomNumbers().split("");
+
+    let result = separatedNumbers.map(function (x) {
+        return parseInt(x, 10);
+    });
+
+    const isOver5 = result.filter(i => i > 5).length;  
+
+        console.log(separatedNumbers.join(''));
+        console.log(separatedNumbers);
+        console.log(isOver5);
+
+        if (isOver5 > 5) {
+            console.log('udało się');
+        }
+
+        else {
+            console.log('niestety nie tym razem');
+        }
+       
+});
 
 
 
