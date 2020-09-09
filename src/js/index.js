@@ -221,30 +221,29 @@ function cutting (){
 
 const loopsTask4 = document.querySelector('.button__loopsTask4--js');
 
-const allNumbers = "0123456789";
+const minNumber = 1;
+const maxNumber = 10;
 
 
 function randomNumbers() {
 
-    let randomNumber = "";
+    let randomNumber = [];
     for (let i = 0; i < 10; i++) {
-        randomNumber += allNumbers[Math.floor(Math.random() * 10)];
+        randomNumber[i] = Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber);
     }
 
     return randomNumber;
 };
 
+
+
 loopsTask4.addEventListener('click', (e) => {
-    var separatedNumbers = randomNumbers().split("");
 
-    let result = separatedNumbers.map(function (x) {
-        return parseInt(x, 10);
-    });
+    console.log(randomNumbers());
 
-    const isOver5 = result.filter(i => i > 5).length;  
 
-        console.log(separatedNumbers.join(''));
-        console.log(separatedNumbers);
+    const isOver5 = randomNumbers().filter(i => i > 5).length;  
+
         console.log(isOver5);
 
         if (isOver5 > 5) {
