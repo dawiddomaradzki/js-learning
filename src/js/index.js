@@ -235,12 +235,9 @@ function randomNumbers() {
     return randomNumber;
 };
 
-
-
 loopsTask4.addEventListener('click', (e) => {
 
     console.log(randomNumbers());
-
 
     const isOver5 = randomNumbers().filter(i => i > 5).length;  
 
@@ -256,6 +253,28 @@ loopsTask4.addEventListener('click', (e) => {
        
 });
 
+// basic loops task #5 // Za pomocą pętli wygeneruj tekst:
+
+const loopsTask5 = document.querySelector('.button__loopsTask5--js');
+
+const var7 = 7;
+
+function fromBottom () {
+
+    let generatedNumber = "";
+    for (let i = 0; i <= var7; i++) {
+        generatedNumber += i
+
+        for (let j = i ;  j > 0; j--){
+            generatedNumber += "-"   
+        }
+    }
+    return generatedNumber
+}
+
+loopsTask5.addEventListener('click', (e) => {
+    console.log(fromBottom());
+});
 
 
 
