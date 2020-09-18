@@ -261,7 +261,7 @@ const var7 = 7;
 
 function fromBottom () {
 
-    let generatedNumber = "";
+    let generatedNumber = '';
     for (let i = 0; i <= var7; i++) {
         generatedNumber += i
 
@@ -274,6 +274,35 @@ function fromBottom () {
 
 loopsTask5.addEventListener('click', (e) => {
     console.log(fromBottom());
+});
+
+// basic loops task #6 // Za pomocą prompt() pobierz od użytkownika liczbę z przedziału min-max. Pamiętaj, że prompt() zwraca zawsze tekst, więc skonwertuj ją na liczbę.
+
+const loopsTask6 = document.querySelector('.button__loopsTask6--js');
+
+const minTask6 = 1;
+const maxTask6 = 1000;
+
+loopsTask6.addEventListener('click', (e) => {
+
+const input = prompt('podaj liczbę od 1-1000');
+const inputToNumber = parseInt(input);
+console.log(input);
+console.log(inputToNumber);
+
+    if (inputToNumber >= 1 && inputToNumber <= 1000) {
+        let i = 0;
+        let loopCounter = 0;
+        while (i !== inputToNumber) {
+            i = Math.floor(Math.random() * (maxTask6 - minTask6 + 1));
+            loopCounter++
+
+        }
+        console.log(`Aby uzyskać wpisaną liczbę, pętla wykonała się ${loopCounter} razy`);
+    } else {
+        console.log(`Zla liczba, sproboj ponownie`);
+    }
+    
 });
 
 
