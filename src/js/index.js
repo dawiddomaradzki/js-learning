@@ -305,5 +305,25 @@ console.log(inputToNumber);
     
 });
 
+const functionsTask1 = document.querySelector('.button__functionsTask1--js');
 
+let task1Text = 'Jakiś Tekst!';
+
+function textCounter(task1Text) {
+
+    let counter = 1;
+    for (let i = 0; i < task1Text.length; i++) {
+        if (/^[a-zA-Z]+$/.test(task1Text[i])) {
+            counter++
+        } 
+    }
+    return counter    
+}
+
+functionsTask1.addEventListener('click', (e) => {
+
+    console.log(task1Text.split(''));
+    console.log(textCounter(task1Text));
+    console.log(`podany tekst zawiera ${textCounter(task1Text)} liter`);
+});
 
