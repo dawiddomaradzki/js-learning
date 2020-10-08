@@ -305,6 +305,8 @@ console.log(inputToNumber);
     
 });
 
+// basic functions task #1 // Napisz funkcję, która przyjmie jeden parametr - dowolny tekst. Funkcja niech ZWRACA tekst Liczba liter: .... gdzie .... to liczba liter tekstu.
+
 const functionsTask1 = document.querySelector('.button__functionsTask1--js');
 
 let task1Text = 'Jakiś Tekst!';
@@ -322,8 +324,25 @@ function textCounter(task1Text) {
 
 functionsTask1.addEventListener('click', (e) => {
 
+    console.log(task1Text);
     console.log(task1Text.split(''));
     console.log(textCounter(task1Text));
     console.log(`podany tekst zawiera ${textCounter(task1Text)} liter`);
 });
 
+// basic functions task #6 // Napisz funkcje, która zsumuje przekazaną do niej tablicę i zwraca jej sumę.Stwórz dowolną tablicę, a następnie przekaż ją do tej funkcji i wynik wypisz w konsoli.
+
+const functionsTask2 = document.querySelector('.button__functionsTask2--js');
+
+const arrTask2 = [6, 6, 6];
+function adding (arrTask2) {
+    let sumArrTask2 = 0;
+    for (let i=0; i<arrTask2.length; i++) {
+        sumArrTask2 += arrTask2[i];
+    }
+      return sumArrTask2  
+}
+
+functionsTask2.addEventListener('click', (e) => {
+    console.log(`Suma tablicy [${arrTask2}] wynosi ${adding(arrTask2)}`);
+});
