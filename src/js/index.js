@@ -330,7 +330,7 @@ functionsTask1.addEventListener('click', (e) => {
     console.log(`podany tekst zawiera ${textCounter(task1Text)} liter`);
 });
 
-// basic functions task #6 // Napisz funkcje, która zsumuje przekazaną do niej tablicę i zwraca jej sumę.Stwórz dowolną tablicę, a następnie przekaż ją do tej funkcji i wynik wypisz w konsoli.
+// basic functions task #2 // Napisz funkcje, która zsumuje przekazaną do niej tablicę i zwraca jej sumę.Stwórz dowolną tablicę, a następnie przekaż ją do tej funkcji i wynik wypisz w konsoli.
 
 const functionsTask2 = document.querySelector('.button__functionsTask2--js');
 
@@ -345,4 +345,25 @@ function adding (arrTask2) {
 
 functionsTask2.addEventListener('click', (e) => {
     console.log(`Suma tablicy [${arrTask2}] wynosi ${adding(arrTask2)}`);
+});
+
+// basic functions task #3 // Napisz funkcję, która przyjmie dowolny tekst. Funkcja niech zwraca tekst, który ma zmiksowana wielkość liter np: 
+// input -> Ala ma kota
+// output -> AlA Ma kOtA
+// Dla ułatwienia spacje liczmy jako literę.
+
+const functionsTask3 = document.querySelector('.button__functionsTask3--js');
+
+const task3Text = 'Ala ma kota';
+
+function bigLetters (task3Text) {
+    let newTask3Text = task3Text.split('');
+    for (let i = 0; i < newTask3Text.length; i += 2) {
+        newTask3Text[i] = newTask3Text[i].toUpperCase();
+    }
+    return newTask3Text.join('');
+}
+
+functionsTask3.addEventListener('click', (e) => {
+    console.log(bigLetters(task3Text));
 });
