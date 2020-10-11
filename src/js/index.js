@@ -367,3 +367,19 @@ function bigLetters (task3Text) {
 functionsTask3.addEventListener('click', (e) => {
     console.log(bigLetters(task3Text));
 });
+
+// basic functions task #4 // Napisz funkcje, która będzie wymagać 2 atrybutów. Funkcja niech sprawdza, czy oba atrybuty są liczbami.Funkcja ma zwracać iloczyn(*) obu liczb.Jeżeli któryś z atrybutów nie jest liczba, funkcja niech zwraca false.
+
+const functionsTask4 = document.querySelector('.button__functionsTask4--js');
+
+function multiplication (number1, number2) {
+    if (typeof number1 !== 'number' || typeof number2 !== 'number') {
+        throw new Error ('Podana wartość nie jest typu string')
+    }
+    const result = number1 * number2;
+    return result
+}
+
+functionsTask4.addEventListener('click', (e) => {
+    console.log(multiplication(6,6));
+});
