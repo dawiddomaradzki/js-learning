@@ -450,22 +450,18 @@ functionsTask6.addEventListener('click', (e) => {
 // output2 -> ["AnIa", "MaRcIn", "BaRtEk", "PiOtR"]
 
 const functionsTask7 = document.querySelector('.button__functionsTask7--js');
-
 let task7names = ["Ania", "Marcin", "Bartek", "Piotr"];
 
 function namesInterlace (task7names) {
-
     task7names = task7names.map(function(x) {
         return x.toUpperCase().split('');
     });
-
     task7names = task7names.map(function (x) {
         for (let i = 1; i<x.length; i+=2){
             x[i]=x[i].toLowerCase();
         }
         return x.join('');
     });
-
     return task7names;
 }
 
@@ -473,10 +469,25 @@ functionsTask7.addEventListener('click', (e) => {
     console.log(namesInterlace(task7names));
 });
 
-// function bigLetters(task3Text) {
-//     let newTask3Text = task3Text.split('');
-//     for (let i = 0; i < newTask3Text.length; i += 2) {
-//         newTask3Text[i] = newTask3Text[i].toUpperCase();
-//     }
-//     return newTask3Text.join('');
-// }
+
+// basic functions task #8 
+// Napisz funkcję checkFemale, która sprawdza przekazane do niej imię.Zróbmy proste teoretyczne założenie, że jeżeli imię kończy się literą "a" to jest to żeńskie imię, w przeciwnym wypadku męskie.Funkcja powinna wracać true jeżeli imię jest żeńskie i false jeżeli jest męskie.Przykładowo:
+// checkFemale("Ania") === true
+// checkFemale("Marcin") === false
+
+const functionsTask8 = document.querySelector('.button__functionsTask8--js');
+
+function getAName() {
+    let name = prompt('Podaj swoje imię');
+    return name;
+}
+
+functionsTask8.addEventListener('click', (e) => {
+    let nameInput = getAName();
+    if (nameInput.endsWith('a') === true) {
+        console.log(`Cześć ${nameInput}, ładnie dziś wyglądasz :)`);
+    }
+    else {
+        console.log(`${nameInput}! Siema chopie!`);
+    }
+});
