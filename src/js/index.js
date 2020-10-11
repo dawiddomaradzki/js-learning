@@ -383,3 +383,43 @@ function multiplication (number1, number2) {
 functionsTask4.addEventListener('click', (e) => {
     console.log(multiplication(6,6));
 });
+
+// basic functions task #5 Napisz funkcje, która przyjmuje 2 parametry: imię - np: Ala miesiac - np: styczen Funkcja ma zwracac:
+
+// jezeli miesiac to grudzien, styczen, luty: "Ala jezdzi na sankach"
+// jezeli miesiac to marzec, kwiecien, maj: "Ala chodzi po kaluzach"
+// jezeli miesiac to czerwiec, lipiec, sierpien: "Ala sie opala"
+// jezeli miesiac to wrzesien, pazdziernik, listopad: "Ala zbiera liscie"
+// Wywołaj funkcje przekazując do niej zmienne: twoje imię i dowolny miesiąc.
+// Dopisz w funkcji zabezpieczenie, które pozwoli wpisać miesiac małymi lub dużymi literami.Jeżeli miesiac jest "innym słowem", funkcja niech zwraca "Ala uczy się JS"
+
+const functionsTask5 = document.querySelector('.button__functionsTask5--js');
+
+const miesiace1 = ['grudzien', 'styczen', 'luty'];
+const miesiace2 = ['marzec', 'kwiecien', 'maj'];
+const miesiace3 = ['czerwiec', 'lipiec', 'sierpien'];
+const miesiace4 = ['wrzesien', 'pazdziernik', 'listopad'];
+
+function nameAndMonth (name, month) {
+    if ( miesiace1.includes(month.toLowerCase(''))) {
+        console.log(`${name} jeździ na sankach`)
+    }
+    if (miesiace2.includes(month.toLowerCase(''))) {
+        console.log(`${name} chodzi po kałużach`)
+    }
+    if (miesiace3.includes(month.toLowerCase(''))) {
+        console.log(`${name} sie opala`)
+    }
+    if (miesiace4.includes(month.toLowerCase(''))) {
+        console.log(`${name} zbiera liście`)
+    }
+
+    else {
+        console.log(`${name} uczy się JS`)
+    }
+
+}
+
+functionsTask5.addEventListener('click', (e) => {
+    console.log(nameAndMonth('Żegota','Wrzesien'));
+});
