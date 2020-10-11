@@ -384,7 +384,7 @@ functionsTask4.addEventListener('click', (e) => {
     console.log(multiplication(6,6));
 });
 
-// basic functions task #5 Napisz funkcje, która przyjmuje 2 parametry: imię - np: Ala miesiac - np: styczen Funkcja ma zwracac:
+// basic functions task #5 //Napisz funkcje, która przyjmuje 2 parametry: imię - np: Ala miesiac - np: styczen Funkcja ma zwracac:
 
 // jezeli miesiac to grudzien, styczen, luty: "Ala jezdzi na sankach"
 // jezeli miesiac to marzec, kwiecien, maj: "Ala chodzi po kaluzach"
@@ -413,13 +413,31 @@ function nameAndMonth (name, month) {
     if (miesiace4.includes(month.toLowerCase(''))) {
         console.log(`${name} zbiera liście`)
     }
-
     else {
         console.log(`${name} uczy się JS`)
     }
-
 }
-
 functionsTask5.addEventListener('click', (e) => {
     console.log(nameAndMonth('Żegota','Wrzesien'));
+});
+
+// basic functions task #6 // Mamy przykładowy tekst: const str = "Ania|Marcin|Bartek|Piotr|Kuba|Beata|Agnieszka"; Napisz funkcję, która przyjmie 2 atrybuty:
+// tekst
+// znak rozdziału(np. |)
+// Skorzystaj z odpowiedniej metody, tak aby rozdzielić przekazany do funkcji tekst na części za pomocą przekazanego znaku rozdziału.W wyniku rozdzielenia powinieneś dostać tablicę.Funkcja niech posegreguje tą tablicę alfabetycznie.Następnie funkcja niech połączy tą tablicę w nowy tekst wstawiając między imiona znak wcześniejszego rozdziału.Skorzystaj tutaj z innej odpowiedniej metody js.input -> "Ania|Marcin|Bartek" output -> "Ania|Bartek|Marcin".Wywołaj tę funkcję przekazując do niej str z początku zadania.
+
+const functionsTask6 = document.querySelector('.button__functionsTask6--js');
+
+const names = "Ania|Marcin|Bartek|Piotr|Kuba|Beata|Agnieszka";
+const sign = "|";
+
+function namesAndSign (names, sign) {
+    const arrNames = names.split(sign).sort().join(sign);
+    return arrNames
+    console.log(arrNames);
+}
+
+functionsTask6.addEventListener('click', (e) => {
+    console.log(`${names} imiona przed sortowaniem`);
+    console.log(namesAndSign(names, sign) + ` imiona po sortowaniu`);
 });
