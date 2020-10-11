@@ -441,3 +441,42 @@ functionsTask6.addEventListener('click', (e) => {
     console.log(`${names} imiona przed sortowaniem`);
     console.log(namesAndSign(names, sign) + ` imiona po sortowaniu`);
 });
+
+// basic functions task #7
+// Napisz 2 funkcje.Każda z nich niech przyjmuje tablicę imion.
+// Pierwsza funkcja niech zwraca nową tablicę, w której imiona są zapisane dużymi literami. Druga funkcja niech zwraca nową tablicę, w której imiona mają zmienną wielkość liter.
+//     input -> ["Ania", "Marcin", "Bartek", "Piotr"]
+// output1 -> ["ANIA", "MARCIN", "BARTEK", "PIOTR"]
+// output2 -> ["AnIa", "MaRcIn", "BaRtEk", "PiOtR"]
+
+const functionsTask7 = document.querySelector('.button__functionsTask7--js');
+
+let task7names = ["Ania", "Marcin", "Bartek", "Piotr"];
+
+function namesInterlace (task7names) {
+
+    task7names = task7names.map(function(x) {
+        return x.toUpperCase().split('');
+    });
+
+    task7names = task7names.map(function (x) {
+        for (let i = 1; i<x.length; i+=2){
+            x[i]=x[i].toLowerCase();
+        }
+        return x.join('');
+    });
+
+    return task7names;
+}
+
+functionsTask7.addEventListener('click', (e) => {
+    console.log(namesInterlace(task7names));
+});
+
+// function bigLetters(task3Text) {
+//     let newTask3Text = task3Text.split('');
+//     for (let i = 0; i < newTask3Text.length; i += 2) {
+//         newTask3Text[i] = newTask3Text[i].toUpperCase();
+//     }
+//     return newTask3Text.join('');
+// }
