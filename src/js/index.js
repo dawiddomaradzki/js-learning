@@ -491,3 +491,28 @@ functionsTask8.addEventListener('click', (e) => {
         console.log(`${nameInput}! Siema chopie!`);
     }
 });
+
+// basic functions task #9 
+// Napisz funkcję countWomanInTable(arr), do której przekażesz tablicę userów, którą masz poniżej.Funkcja powinna sprawdzić każdego użytkownika w tablicy i zwrócić ile jest kobiet.Wykorzystaj tutaj funkcję z poprzedniego zadania.Jak pobrać imię z usera ? Możesz to osiągnąć za pomocą metody split().Podziel string na 2 części - uzyskasz tablicę 2 elementów.Pierwszy to imię, drugi to nazwisko
+// const users = ["Ania Nowak", "Piotr Kowalski", "Bartek Kosecki", "Natalia Nowak", "Weronika Piotrowska", "Agata Beatczak", "Tomasz Nowak", "Mateusz Kowalski", "Marcin Kotecki", "Betata Lecka", "Katarzyna Melecka"]
+
+const functionsTask9 = document.querySelector('.button__functionsTask9--js');
+
+let users = ["Ania Nowak", "Piotr Kowalski", "Bartek Kosecki", "Natalia Nowak", "Weronika Piotrowska", "Agata Beatczak", "Tomasz Nowak", "Mateusz Kowalski", "Marcin Kotecki", "Betata Lecka", "Katarzyna Melecka"]
+
+function countWomanInTable(users) {
+   let newUsers = users.join(' ').split(' ');
+    let counter = 0;
+   for (let i=0; i<newUsers.length; i+=2) {
+    
+       if (newUsers[i].endsWith('a') === true) {
+        counter++;
+       }
+   }
+    return counter;
+    
+}
+
+functionsTask9.addEventListener('click', (e) => {
+  console.log(`Ilość kobiet w tablicy to: ${countWomanInTable(users)}`);
+});
