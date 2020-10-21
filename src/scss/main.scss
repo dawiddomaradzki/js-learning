@@ -82,6 +82,7 @@ section:first-of-type {
 }
 .taskNav {
   display: flex;
+  position: fixed;
   width: 200px;
 
   &__ul {
