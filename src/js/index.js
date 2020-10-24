@@ -528,3 +528,18 @@ function countWomanInTable(users) {
 functionsTask9.addEventListener('click', (e) => {
   console.log(`Ilość kobiet w tablicy to: ${countWomanInTable(users)}`);
 });
+
+
+// Caesar Cipher
+
+let caesarButton = document.querySelector('.button__caesar--js');
+
+function sConsole(event) {
+    event.preventDefault();
+    var textInput = document.getElementById("textInput").value;
+    return textInput;
+}
+
+caesarButton.addEventListener('click', (e) => {
+    console.log(sConsole(event));
+});
