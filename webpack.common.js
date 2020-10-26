@@ -9,6 +9,7 @@ module.exports = {
     basicStrings: "./src/js/basicStrings.js",
     basicLoops: "./src/js/basicLoops.js",
     basicFunctions: "./src/js/basicFunctions.js",
+    basicArrays: "./src/js/basicArrays.js",
     caesarCipher: "./src/js/caesarCipher.js",
   },
   output: {
@@ -83,7 +84,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,
-      chunks: ["index", "another", "basicStrings", "basicLoops", "basicFunctions", "caesarCipher"],
+      chunks: ["index", "another", "basicStrings", "basicLoops", "basicFunctions", "basicArrays","caesarCipher"],
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
