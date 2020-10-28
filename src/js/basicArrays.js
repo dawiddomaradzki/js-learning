@@ -63,3 +63,23 @@ arraysTask3.addEventListener('click', (e) => {
     }
     console.table(newRandomArray);
 });
+
+// basic arrays task #4 // Mamy tablicę:
+// Posortuj ją i wypisz w konsoli.
+
+const arraysTask4 = document.querySelector('.button__arraysTask4--js');
+
+const names = [
+    "Marcin",
+    "Ania",
+    "Monika",
+    "Piotrek",
+    "Beata"];
+
+arraysTask4.addEventListener('click', (e) => {
+    console.log(names.sort());
+}); 
+
+
+
+
