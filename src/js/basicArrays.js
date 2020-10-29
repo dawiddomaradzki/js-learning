@@ -80,6 +80,37 @@ arraysTask4.addEventListener('click', (e) => {
     console.log(names.sort());
 }); 
 
+// basic arrays task #5 // Mamy tablicę: 
+// Posortuj ją po długościach kolejnych elementów.Na początku powinien być najkrótszy tekst, na końcu najdłuższy.Następnie napisz, ile liter mają wszystkie elementy razem.
+
+const arraysTask5 = document.querySelector('.button__arraysTask5--js');
+
+const tab = [
+    "xloremipsumdolor",
+    "kloremipsum",
+    "aloremipsumdol",
+    "blor",
+    "cloremipsu",
+    "gloremip",
+]
+
+const compare = (a,b) => {
+
+        if (a.length < b.length) {
+            return -1
+        }
+        if (a.length > b.length) {
+            return 1
+        }
+        return 0
+}
+
+const aCountArr = tab.join('').replace(/^,/i, '');
+arraysTask5.addEventListener('click', (e) => {
+    console.log(tab.sort(compare));
+    console.log(`Liczba liter we wszystkich stringach w tablicy wynosi: ${aCountArr.length+1}`);
+});
+
 
 
 
