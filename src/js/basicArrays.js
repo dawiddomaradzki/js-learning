@@ -111,6 +111,48 @@ arraysTask5.addEventListener('click', (e) => {
     console.log(`Liczba liter we wszystkich stringach w tablicy wynosi: ${aCountArr.length+1}`);
 });
 
+// basic arrays task #6 // Mamy tablicę:
+// Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są pełnoletni.Dodatkowe - spróbuj zrobić to zadanie także za pomocą odpowiedniej do tego celu funkcji.
 
+const arraysTask6 = document.querySelector('.button__arraysTask6--js');
+
+const tabUsers = [
+    { name: "Marcin", age: 14 },
+    { name: "Piotr", age: 18 },
+    { name: "Agnieszka", age: 13 },
+    { name: "Weronika", age: 20 }
+];
+
+let mature = (tabUsers) => {
+    let name = [];
+    for (let i = 0; i < tabUsers.length; i++) {
+        if (tabUsers[i].age >= 18) {
+            name.push(tabUsers[i].name);
+        }
+    }
+  return name;
+};
+
+let functionMature = tabUsers.map(el => {
+    
+    if (el.age >= 18) {
+        return el.name;
+    }
+});
+
+// let functionMature = tabUsers.map(el => {
+   
+//         return el.age >= 18;
+    
+    
+// });
+
+   
+
+arraysTask6.addEventListener('click', (e) => {
+    console.log(`Osoby pełnoletnie to: ${mature(tabUsers).join(', ')}`);
+    // console.log(`Osoby pełnoletnie to: ${functionMature}`);
+    console.log(`Osoby pełnoletnie to: ${functionMature.filter(Boolean)}`);
+});
 
 
