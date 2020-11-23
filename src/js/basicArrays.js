@@ -1,7 +1,6 @@
 // basic arrays task #1 // Zadeklaruj tablicę tab z 5 losowymi wyrazami. Wypisz w konsoli tą tablicę i jej długość. Następnie wypisz pierwszy i ostatni element oraz ich długość.
 // Robiąc pętlę po powyższej tablicy wypisz każdy element dużymi literami oraz jego długość.Skorzystaj z pętli for, for of i forEach.
 
-
 const arraysTask1 = document.querySelector('.button__arraysTask1--js');
 
 let randomArray = ['kartka', 'monitor', 'myszka', 'tran', 'zeszyt'];
@@ -140,13 +139,6 @@ let functionMature = tabUsers.map(el => {
     }
 });
 
-// let functionMature = tabUsers.map(el => {
-   
-//         return el.age >= 18;
-    
-    
-// });
-
    
 
 arraysTask6.addEventListener('click', (e) => {
@@ -155,4 +147,19 @@ arraysTask6.addEventListener('click', (e) => {
     console.log(`Osoby pełnoletnie to: ${functionMature.filter(Boolean)}`);
 });
 
+// basic arrays task #7 // Napisz funkcję checkPalindrom(txt), która zwróci true/false w zależności od tego, czy przekazane słowo jest palindromem.
 
+const arraysTask7 = document.querySelector('.button__arraysTask7--js');
+
+const palindrom = (event) => {
+    event.preventDefault();
+    let arraysTask7Input = document.getElementById("arraysTask7Input").value;
+
+    return arraysTask7Input;
+}
+
+// toLowerCase().replace(/[\W_]/g, '');
+
+arraysTask7.addEventListener('click', (e) => {
+    console.log(palindrom(event));
+});
