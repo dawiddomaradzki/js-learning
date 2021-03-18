@@ -153,10 +153,15 @@ const arraysTask7 = document.querySelector('.button__arraysTask7--js');
 
 const palindrom = (event) => {
     event.preventDefault();
-    let arraysTask7Input = document.getElementById("arraysTask7Input").value;
+    let arraysTask7Input = document.getElementById("arraysTask7Input").value.toLowerCase().replace(/\s/g, '');
 
-    return arraysTask7Input;
+    let arraysTask7InputPalindrome = arraysTask7Input.split('').reverse().join('');
+
+    // return arraysTask7Input;
+    return arraysTask7Input === arraysTask7InputPalindrome;
 }
+
+
 
 // toLowerCase().replace(/[\W_]/g, '');
 
