@@ -157,14 +157,30 @@ const palindrom = (event) => {
 
     let arraysTask7InputPalindrome = arraysTask7Input.split('').reverse().join('');
 
-    // return arraysTask7Input;
     return arraysTask7Input === arraysTask7InputPalindrome;
-}
-
-
-
-// toLowerCase().replace(/[\W_]/g, '');
+};
 
 arraysTask7.addEventListener('click', (e) => {
     console.log(palindrom(event));
+});
+
+// basic arrays task #8 // Napisz funkcję, która zwróci losową liczbę z przedziału min-max.
+
+const arraysTask8 = document.querySelector('.button__arraysTask8--js');
+
+const interval = (event) => {
+    event.preventDefault();
+    let arraysTask8InputMin = document.getElementById("arraysTask8InputMin").value;
+
+    let arraysTask8InputMax = document.getElementById("arraysTask8InputMax").value;
+
+    let intervalMin = parseInt(arraysTask8InputMin);
+    let intervalMax = parseInt(arraysTask8InputMax);
+
+
+    return Math.floor(Math.random() * (intervalMax - intervalMin + 1)) + intervalMin;
+};
+
+arraysTask8.addEventListener('click', (e) => {
+    console.log(interval(event));
 });
