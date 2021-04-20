@@ -184,3 +184,55 @@ const interval = (event) => {
 arraysTask8.addEventListener('click', (e) => {
     console.log(interval(event));
 });
+
+const arraysTask9 = document.querySelector('.button__arraysTask9--js');
+
+const interval2 = (event) => {
+    event.preventDefault();
+    let arraysTask9InputMin = document.getElementById("arraysTask9InputMin").value;
+
+    let arraysTask9InputMax = document.getElementById("arraysTask9InputMax").value;
+
+    let arraysTask9InputCount = document.getElementById("arraysTask9Count").value;
+
+    let intervalMin = parseInt(arraysTask9InputMin);
+    let intervalMax = parseInt(arraysTask9InputMax);
+    let tableCount = parseInt(arraysTask9InputCount);
+
+    // let testArray = [intervalMin, intervalMax, tableCount];
+
+    let table = [];
+
+    for (let i=0; i<tableCount; i++ ) {
+    table.push(Math.floor(Math.random() * (intervalMax - intervalMin + 1)) + intervalMin);
+    }
+
+    return table;
+
+    // return testArray;
+    
+};
+
+
+
+arraysTask9.addEventListener('click', (e) => {
+    console.table(interval2(event));
+})
+
+
+// let mature = (tabUsers) => {
+//     let name = [];
+//     for (let i = 0; i < tabUsers.length; i++) {
+//         if (tabUsers[i].age >= 18) {
+//             name.push(tabUsers[i].name);
+//         }
+//     }
+//   return name;
+// };
+
+// let functionMature = tabUsers.map(el => {
+    
+//     if (el.age >= 18) {
+//         return el.name;
+//     }
+// });

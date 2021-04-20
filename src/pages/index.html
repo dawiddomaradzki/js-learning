@@ -392,7 +392,7 @@ Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są p
           <p>
            Napisz funkcję <code>checkPalindrom(txt)</code>, która zwróci true/false w zależności od tego, czy przekazane słowo jest palindromem.
           </p>
-          <form action="" id="palindromForm" onsubmit="palindrom">
+          <form action="" id="palindromForm" onsubmit="palindrom" autocomplete="off">
     
         <label for="arraysTask7Input">Wprowadź tekst</label>
         <input type="text" placeholder="Wpowadź tekst" name="arraysTask7Input" id="arraysTask7Input">
@@ -407,7 +407,7 @@ Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są p
            Napisz funkcję, która zwróci losową liczbę z przedziału min-max.
           </p>
          
-        <form action="" id="palindromForm" onsubmit="palindrom">
+        <form action="" id="intervalForm" onsubmit="interval">
     
         <label for="arraysTask8Input">Wprowadź przedział</label>
         <input type="number" placeholder="Wpowadź dolny przedział" name="arraysTask8InputMin" id="arraysTask8InputMin">
@@ -424,6 +424,12 @@ Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są p
           <p>
            Napisz funkcję <code>generateRandomTable(min, max, count)</code>, która zwróci tablicę o długości <code>count</code>, w której będą losowe liczby z zakresu min-max. Do losowania liczb wykorzystaj funkcję z poprzedniego zadania. Wynik odpalenia funkcji podstaw po zmienną, a następnie wypisz ją w konsoli. Następnie wypisz w konsoli największą liczbę w tej tablicy.
           </p>
+          <label for="arraysTask9Input">Wprowadź przedział</label>
+        <input type="number" placeholder="Wpowadź dolny przedział" name="arraysTask9InputMin" id="arraysTask9InputMin">
+
+        <input type="number" placeholder="Wpowadź górny przedział" name="arraysTask9InputMax" id="arraysTask9InputMax">
+
+            <input type="number" placeholder="Wpowadź count" name="arraysTask9" id="arraysTask9Count">
           <div class="button">
             <button class="button__click button__arraysTask9--js">Klik</button>
           </div>
@@ -432,6 +438,7 @@ Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są p
           <p>
            Stwórz funkcję <code>monthName(nr)</code>, która będzie przyjmować tylko jeden atrybut - numer miesiąca. Funkcja powinna sprawdzić czy numer miesiąca jest prawidłowy (1-12). Jeżeli tak jest powinna zwrócić nazwę miesiąca w języku polskim. Wykorzystaj tutaj tablicę.<br>Dla przykładu: <code>monthName(10) -> "październik"</code>
           </p>
+        
           <div class="button">
             <button class="button__click button__arraysTask10--js">Klik</button>
           </div>
