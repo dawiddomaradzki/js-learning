@@ -5,7 +5,6 @@ module.exports = {
   /* here you can define another js file */
   entry: {
     index: "./src/js/index.js",
-    another: "./src/js/another.js",
     basicStrings: "./src/js/basicStrings.js",
     basicLoops: "./src/js/basicLoops.js",
     basicFunctions: "./src/js/basicFunctions.js",
@@ -72,9 +71,7 @@ module.exports = {
         {
           from: "public",
           globOptions: {
-            ignore: [
-              '**/*.DS_Store'
-            ],
+            ignore: ["**/*.DS_Store"],
           },
         },
       ],
@@ -84,14 +81,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,
-      chunks: ["index", "another", "basicStrings", "basicLoops", "basicFunctions", "basicArrays","caesarCipher"],
+      chunks: [
+        "index",
+        "another",
+        "basicStrings",
+        "basicLoops",
+        "basicFunctions",
+        "basicArrays",
+        "caesarCipher",
+      ],
       filename: "index.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/another.html",
-      inject: true,
-      chunks: ["index", "another"],
-      filename: "another.html",
     }),
   ],
 };
