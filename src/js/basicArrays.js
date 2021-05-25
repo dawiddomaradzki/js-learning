@@ -233,7 +233,7 @@ arraysTask9.addEventListener("click", (e) => {
   console.log(`Największa liczba w tabeli to: ${Math.max(...finalArray)}`);
 });
 
-// basic arrays task #9 Stwórz funkcję monthName(nr), która będzie przyjmować tylko jeden atrybut - numer miesiąca. Funkcja powinna sprawdzić czy numer miesiąca jest prawidłowy (1-12). Jeżeli tak jest powinna zwrócić nazwę miesiąca w języku polskim. Wykorzystaj tutaj tablicę.Dla przykładu: monthName(10) -> "październik"
+// basic arrays task #10 Stwórz funkcję monthName(nr), która będzie przyjmować tylko jeden atrybut - numer miesiąca. Funkcja powinna sprawdzić czy numer miesiąca jest prawidłowy (1-12). Jeżeli tak jest powinna zwrócić nazwę miesiąca w języku polskim. Wykorzystaj tutaj tablicę.Dla przykładu: monthName(10) -> "październik"
 
 const arraysTask10 = document.querySelector(".button__arraysTask10--js");
 

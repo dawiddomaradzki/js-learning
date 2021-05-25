@@ -10,6 +10,7 @@ module.exports = {
     basicFunctions: "./src/js/basicFunctions.js",
     basicArrays: "./src/js/basicArrays.js",
     caesarCipher: "./src/js/caesarCipher.js",
+    arraysUsers: "./src/js/arraysUsers.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -83,12 +84,12 @@ module.exports = {
       inject: true,
       chunks: [
         "index",
-        "another",
         "basicStrings",
         "basicLoops",
         "basicFunctions",
         "basicArrays",
         "caesarCipher",
+        "arraysUsers",
       ],
       filename: "index.html",
     }),
