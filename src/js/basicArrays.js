@@ -173,11 +173,13 @@ const arraysTask8 = document.querySelector(".button__arraysTask8--js");
 const generateRandomNumber = () => {
   //   event.preventDefault();
 
-  let arraysTask8InputMin = document.getElementById("arraysTask8InputMin")
-    .value;
+  let arraysTask8InputMin = document.getElementById(
+    "arraysTask8InputMin"
+  ).value;
 
-  let arraysTask8InputMax = document.getElementById("arraysTask8InputMax")
-    .value;
+  let arraysTask8InputMax = document.getElementById(
+    "arraysTask8InputMax"
+  ).value;
 
   let intervalMin = parseInt(arraysTask8InputMin);
   let intervalMax = parseInt(arraysTask8InputMax);
@@ -191,16 +193,18 @@ arraysTask8.addEventListener("click", (e) => {
   console.log(generateRandomNumber());
 });
 
-// Napisz funkcję <,>generateRandomTable(min, max, count),która zwróci tablicę o długości count, w której będą losowe liczby z zakresu min-max. Do losowania liczb wykorzystaj funkcję z poprzedniego zadania. Wynik odpalenia funkcji podstaw po zmienną, a następnie wypisz ją w konsoli. Następnie wypisz w konsoli największą liczbę w tej tablicy.
+// basic arrays task #9 // Napisz funkcję <,>generateRandomTable(min, max, count),która zwróci tablicę o długości count, w której będą losowe liczby z zakresu min-max. Do losowania liczb wykorzystaj funkcję z poprzedniego zadania. Wynik odpalenia funkcji podstaw po zmienną, a następnie wypisz ją w konsoli. Następnie wypisz w konsoli największą liczbę w tej tablicy.
 
 const arraysTask9 = document.querySelector(".button__arraysTask9--js");
 
 const generateRandomTable = () => {
-  let arraysTask9InputMin = document.getElementById("arraysTask9InputMin")
-    .value;
+  let arraysTask9InputMin = document.getElementById(
+    "arraysTask9InputMin"
+  ).value;
 
-  let arraysTask9InputMax = document.getElementById("arraysTask9InputMax")
-    .value;
+  let arraysTask9InputMax = document.getElementById(
+    "arraysTask9InputMax"
+  ).value;
 
   let arraysTask9InputCount = document.getElementById("arraysTask9Count").value;
 
@@ -227,4 +231,46 @@ arraysTask9.addEventListener("click", (e) => {
   console.table(finalArray);
   console.log(finalArray);
   console.log(`Największa liczba w tabeli to: ${Math.max(...finalArray)}`);
+});
+
+// basic arrays task #9 Stwórz funkcję monthName(nr), która będzie przyjmować tylko jeden atrybut - numer miesiąca. Funkcja powinna sprawdzić czy numer miesiąca jest prawidłowy (1-12). Jeżeli tak jest powinna zwrócić nazwę miesiąca w języku polskim. Wykorzystaj tutaj tablicę.Dla przykładu: monthName(10) -> "październik"
+
+const arraysTask10 = document.querySelector(".button__arraysTask10--js");
+
+const months = [
+  "styczeń",
+  "luty",
+  "marzec",
+  "kwiecień",
+  "maj",
+  "czerwiec",
+  "lipiec",
+  "sierpień",
+  "wrzesień",
+  "październik",
+  "listopad",
+  "grudzień",
+];
+
+let getMonthNumber = () => {
+  let arraysTask10Input = document.getElementById("arraysTask10Input").value;
+
+  let arraysTask10InputNumber = parseInt(arraysTask10Input);
+
+  return arraysTask10InputNumber;
+};
+
+arraysTask10.addEventListener("click", (e) => {
+  console.log(getMonthNumber());
+
+  let getMonthNumberCondition = (number) => {
+    if (number >= 1 && number <= 12) {
+      console.log(`Podany miesiąc to ${months[number - 1]}`);
+    } else {
+      console.log("Podana wartość jest niewłaściwa");
+    }
+  };
+  const getMonthNumberForwarded = getMonthNumber();
+
+  getMonthNumberCondition(getMonthNumberForwarded);
 });
