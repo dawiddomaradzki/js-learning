@@ -1,4 +1,4 @@
-import '../scss/main.scss';
+import "../scss/main.scss";
 (function ($) {
   $("nav li").click(function () {
     $(this).addClass("active").siblings("li").removeClass("active");
@@ -8,7 +8,6 @@ import '../scss/main.scss';
       .siblings("section")
       .stop()
       .fadeOut(200, "linear");
-
   });
 })(jQuery);
 
@@ -18,10 +17,4 @@ import '../scss/main.scss';
 
 /* place your code below */
 
-console.log('HELLO 🚀')
-
-
-
-
-
-
+console.log("HELLO 🚀");
