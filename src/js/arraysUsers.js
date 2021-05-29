@@ -28,3 +28,18 @@ const adultsAge = adults.map((adultperson) => {
 userTask2.addEventListener("click", (e) => {
   console.log(adultsAge);
 });
+
+// Arrays Users task #3
+// Wypisz tablicę z wszystkimi kobietami
+
+const userTask3 = document.querySelector(".button__arraysUsers3--js");
+
+const female = users.filter((person) => {
+  return person.gender == "female";
+});
+
+const femaleNames = female.map((femalesNames) => femalesNames.name);
+
+userTask3.addEventListener("click", (e) => {
+  console.log(femaleNames);
+});
