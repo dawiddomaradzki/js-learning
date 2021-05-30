@@ -45,7 +45,7 @@ userTask3.addEventListener("click", (e) => {
 });
 
 // Arrays Users task #4
-// Wypisz tablicę użytkowników którzy mają tag "dolor"
+// Wypisz tablicę użytkowników którzy maja tag "dolor"
 
 const userTask4 = document.querySelector(".button__arraysUsers4--js");
 
