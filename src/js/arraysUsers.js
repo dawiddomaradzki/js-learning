@@ -72,3 +72,16 @@ const allAdults = users.every((person) => {
 userTask5.addEventListener("click", (e) => {
   console.log(allAdults);
 });
+
+// Arrays Users task #6
+// Wypisz true/false w zależności od tego czy chociaż jeden z użytkowników jest pełnoletni
+
+const userTask6 = document.querySelector(".button__arraysUsers6--js");
+
+const justOneAdults = users.some((person) => {
+  return person.age >= 18;
+});
+
+userTask6.addEventListener("click", (e) => {
+  console.log(justOneAdults);
+});
