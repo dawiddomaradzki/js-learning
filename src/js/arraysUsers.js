@@ -109,3 +109,33 @@ let functionNames = (onlyNamesString) => {
 userTask7.addEventListener("click", (e) => {
   console.log(functionNames(onlyNamesString));
 });
+
+// Arrays Users task #8
+// Wypisz liczbę kobiet i liczbę mężczyzn. Wypisz tekst która grupa jest liczniejsza (np. "kobiety wygrywają")
+
+const userTask8 = document.querySelector(".button__arraysUsers8--js");
+
+const men = users.filter((person) => {
+  return person.gender === "male";
+});
+
+const women = users.filter((person) => {
+  return person.gender === "female";
+});
+
+const comparison = () => {
+  if (men.length > women.length) {
+    console.log("Mężczyzn jest więcej niż kobiet w tablicy");
+  }
+  if (men.length < women.length) {
+    console.log("Kobiet jest więcej niż mężczyzn w tablicy");
+  } else {
+    console.log("Mężczyzn i kobiet jes po równo w tablicy");
+  }
+};
+
+userTask8.addEventListener("click", (e) => {
+  console.log(men);
+  console.log(women);
+  comparison();
+});
