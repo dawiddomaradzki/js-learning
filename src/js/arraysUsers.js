@@ -85,3 +85,27 @@ const justOneAdults = users.some((person) => {
 userTask6.addEventListener("click", (e) => {
   console.log(justOneAdults);
 });
+
+// Arrays Users task #7
+// Wypisz nową tablicę zawierającą tylko imiona użytkowników które będą pisane dużymi literami
+
+const userTask7 = document.querySelector(".button__arraysUsers7--js");
+
+const onlyNames = users.map((person) => {
+  return person.name;
+});
+
+const onlyNamesString = onlyNames.join(" ").toUpperCase().split(" ");
+
+let functionNames = (onlyNamesString) => {
+  let justNames = [];
+  for (let i = 0; i < onlyNamesString.length; i += 2) {
+    justNames.push(onlyNamesString[i]);
+  }
+
+  return justNames;
+};
+
+userTask7.addEventListener("click", (e) => {
+  console.log(functionNames(onlyNamesString));
+});
