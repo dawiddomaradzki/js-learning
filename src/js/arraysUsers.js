@@ -43,3 +43,19 @@ const femaleNames = female.map((femalesNames) => femalesNames.name);
 userTask3.addEventListener("click", (e) => {
   console.log(femaleNames);
 });
+
+// Arrays Users task #4
+// Wypisz tablicę użytkowników którzy mają tag "dolor"
+
+const userTask4 = document.querySelector(".button__arraysUsers4--js");
+
+const dolor = users.filter((person) => {
+  return person.tags.includes("dolor");
+});
+
+const dolorPerson = dolor.map((dolorPerson) => dolorPerson.name);
+
+userTask4.addEventListener("click", (e) => {
+  console.log(dolor);
+  console.log(dolorPerson);
+});
