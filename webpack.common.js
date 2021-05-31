@@ -11,6 +11,7 @@ module.exports = {
     basicArrays: "./src/js/basicArrays.js",
     caesarCipher: "./src/js/caesarCipher.js",
     arraysUsers: "./src/js/arraysUsers.js",
+    arraysCities: "./src/js/arraysCities.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -90,6 +91,7 @@ module.exports = {
         "basicArrays",
         "caesarCipher",
         "arraysUsers",
+        "arraysCities",
       ],
       filename: "index.html",
     }),
