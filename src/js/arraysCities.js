@@ -23,3 +23,37 @@ citiesTask2.addEventListener("click", (e) => {
     `Łącznie w miastach znajdujących się w tablicy jest ${allPeople} ludzi`
   );
 });
+
+// Arrays Cities task #3
+// Wypisz pierwsze miasto, w którym jest ponad 10000 ludzi
+
+const citiesTask3 = document.querySelector(".button__arraysCities3--js");
+
+const firstCity = cities.find((city) => {
+  return city.people > 10000;
+});
+
+citiesTask3.addEventListener("click", (e) => {
+  console.log(firstCity);
+});
+
+// Arrays Cities task #4
+// Wypisz miasta, w których ludzi jest ponad średnią
+
+const citiesTask4 = document.querySelector(".button__arraysCities4--js");
+
+const median = parseInt(allPeople) / parseInt(cities.length);
+
+const aboveMedian = cities.filter((city) => {
+  return city.people > median;
+});
+
+const aboveMedianNames = aboveMedian.map((city) => {
+  return city.name;
+});
+
+citiesTask4.addEventListener("click", (e) => {
+  console.log(median);
+  console.log(aboveMedian);
+  console.log(aboveMedianNames);
+});
