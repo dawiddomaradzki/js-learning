@@ -57,3 +57,21 @@ citiesTask4.addEventListener("click", (e) => {
   console.log(aboveMedian);
   console.log(aboveMedianNames);
 });
+
+// Arrays Cities task #5
+// Wypisz nazwy wszystkich miast, w których jest ponad 10000 ludzi
+
+const citiesTask5 = document.querySelector(".button__arraysCities5--js");
+
+const cityAbove10000 = cities.filter((city) => {
+  return city.people > 10000;
+});
+
+const cityAbove10000Array = cityAbove10000.map((city) => {
+  return city.name;
+});
+
+citiesTask5.addEventListener("click", (e) => {
+  console.log(cityAbove10000);
+  console.log(cityAbove10000Array);
+});
