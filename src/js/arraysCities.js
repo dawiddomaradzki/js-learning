@@ -75,3 +75,25 @@ citiesTask5.addEventListener("click", (e) => {
   console.log(cityAbove10000);
   console.log(cityAbove10000Array);
 });
+
+// Arrays Cities task #6
+// Wypisz czy więcej jest miast z > 10000 ludzi czy mniejszych
+
+const citiesTask6 = document.querySelector(".button__arraysCities6--js");
+
+const citiesComapare = () => {
+  if (parseInt(cities.length) / 2 > parseInt(cityAbove10000.length)) {
+    console.log("W tablicy jest mniej miast z ludnością min. 10000");
+  } else if (parseInt(cities.length) / 2 < parseInt(cityAbove10000.length)) {
+    console.log("W tablicy jest więcej miast z ludnością min. 10000");
+  } else {
+    console.log(
+      "W tablicy po tyle samo miast z ludnością min. 10000 i tych poniżej"
+    );
+  }
+};
+
+citiesTask6.addEventListener("click", (e) => {
+  citiesComapare();
+  console.log(parseInt(cityAbove10000.length));
+});
