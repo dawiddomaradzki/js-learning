@@ -633,6 +633,171 @@ Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są p
             <button class="button__click button__objectsFirst1--js">Klik</button>
           </div>
 
+          <h2 class="exerciseNumber">Zadanie 2</h2>
+          <p>
+           Stwórz obiekt <b>currentUser</b>. Obiekt niech ma właściwości: <code>name, surname, email, www, userType, isActive</code>.
+
+            oraz metodę <code>show()</code>, która wypisze wszystkie te właściwości w konsoli.
+
+            Dodatkowo stwórz metodę <code>setActive(active)</code>, która przestawi właściwość <code>isActive</code> na przekazaną wartość, która może być true/false. 
+          </p>
+          <div class="button">
+            <button class="button__click button__objectsFirst2--js">Klik</button>
+          </div>
+
+          <h2 class="exerciseNumber">Zadanie 3</h2>
+          <p>
+            Stwórz obiekt book, który będzie miał właściwości: <code>title, author, pageCount, publisher</code>.
+
+            oraz metodę: <code>showDetails()</code>, która zrobi pętlę po tym obiekcie wypisując wszystkie jego klucze oraz ich wartości. Metoda ta nie powinna wypisywać tylko funkcji <code>showDetails()</code>.
+
+            Wypisywanie właściwości wykonaj za pomocą pętli <code>for in</code>, oraz pętli po kolekcjach <code>Object.keys(), Object.values(), Object.entries()</code>.
+          </p>
+          <div class="button">
+            <button class="button__click button__objectsFirst3--js">Klik</button>
+          </div>
+
+          <h2 class="exerciseNumber">Zadanie 4</h2>
+          <p>
+            Stwórz prosty obiekt spaceShip, który będzie miał:
+          </p>
+          <p><b>Właściwości:</b></p>
+          <ul>
+            <li><b>name</b> ustawioną na Enterprise</li>
+            <li><b>currentLocation</b> ustawioną na Earth</li>
+            <li><b>flyDistance</b> ustawione na 0</li>
+          </ul>
+          <p><b>Metody:</b></p>
+          <ul>
+            <li>
+              <b>flyTo(place, distance)</b> która ustawi obiektowi właściwość <code>currentLocation</code> na odpowiednie miejsce podane w parametrze <code>place</code> oraz doliczy przebyty dystans do <code>flyDistance</code>.
+            </li>
+            <li>
+              Metodę <b>showInfo()</b> która wypisze w konsoli tekst: 
+              <code>Informacje o statku:
+              ----
+              Statek ....
+              doleciał do miejsca .....
+              Statek przeleciał już całkowity dystans ....</code>
+            </li>
+            <li>
+              Metodę <b>meetClingon()</b> która wykona 100 losowań 0-1. Jeżeli minimum połowa będzie pozytywna (większa niż połowa), wtedy powinna wypisać w konsoli:
+              <p><code>Statek .... będący w okolicy .... zwycięsko wyszedł ze spotkania z Klingonami
+              </code></p>
+              <p>jeżeli jednak mniej niż połowa będzie pozytywna, powinien pojawić się żółty tekst w konsoli (console.alert)</p>
+              <p><code>Statek .... będący w okolicy .... został pokonany przez Klingonów</code></p>
+            </li>
+          </ul>
+          <div class="button">
+            <button class="button__click button__objectsFirst4--js">Klik</button>
+          </div>
+
+          <h2 class="exerciseNumber">Zadanie 5</h2>
+          <p>
+            Stwórz obiekt <b>book</b>, który będzie miał:
+          </p>
+          <p><b>Właściwości:</b></p>
+          <ul>
+            <li>
+              <b>users</b> która będzie tablicą użytkowników (na początku pusta)
+            </li>
+          </ul>
+          <p><b>Metody:</b></p>
+          <ul>
+            <li>
+              <b>addUser(name, age, phone)</b>
+
+              która doda to tablicy <code>users</code> nowy obiekt, który będzie miał klucze: name, age, phone z przekazanymi do tej funkcji danymi
+            </li>
+            <li>
+              <b>showUsers()</b>
+
+              która po odpaleniu wypisze w konsoli tekst: <code>Wszyscy użytkownicy w książce</code> a następnie w pętli wypisze wszystkich użytkowników
+            </li>
+            <li>
+              <b>findByName(name)</b> która wypisze w konsoli pierwszego użytkownika, który ma szukane imię lub false jeżeli nie znajdzie.
+            </li>
+            <li>
+              <b>findByPhone(phone)</b>która wypisze w konsoli pierwszego użytkownika, który ma szukany telefon lub false jeżeli nie znajdzie
+            </li>
+            <li>
+              <b>getCount()</b> która wypisze ile jest użytkowników w tabeli
+            </li>
+          </ul>
+         
+          <div class="button">
+            <button class="button__click button__objectsFirst5--js">Klik</button>
+          </div>
+
+          <h2 class="exerciseNumber">Zadanie 6</h2>
+          <p>
+            Stwórz obiekt o nazwie <b>tableGenerator</b>. Obiekt ten powinien mieć tylko metody:
+          </p>
+          <p><b>Właściwości:</b></p>
+          <ul>
+            <li>
+              <b>users</b> która będzie tablicą użytkowników (na początku pusta)
+            </li>
+          </ul>
+          <p><b>Metody:</b></p>
+          <ul>
+            <li>
+              <b>addUser(name, age, phone)</b> która doda to tablicy <code>users</code> nowy obiekt, który będzie miał klucze: name, age, phone z przekazanymi do tej funkcji danymi
+            </li>
+            <li>
+              <b>showUsers()</b> która po odpaleniu wypisze w konsoli tekst: <code>Wszyscy użytkownicy w książce</code> a następnie w pętli wypisze wszystkich użytkowników
+            </li>
+            <li>
+              <b>findByName(name)</b> która wypisze w konsoli pierwszego użytkownika, który ma szukane imię lub false jeżeli nie znajdzie.
+            </li>
+            <li>
+              <b>findByPhone(phone)</b> która wypisze w konsoli pierwszego użytkownika, który ma szukany telefon lub false jeżeli nie znajdzie
+            </li>
+            <li>
+              <b>getCount()</b> która wypisze ile jest użytkowników w tabeli
+            </li>
+          </ul>
+          <div class="button">
+            <button class="button__click button__objectsFirst6--js">Klik</button>
+          </div>
+
+          <h2 class="exerciseNumber">Zadanie 7</h2>
+          <p>
+           Stwórz obiekt o nazwie <b>text</b>. Obiekt ten powinien mieć metody:
+          </p>
+          <ol>
+            <li>
+              <b>check(txt, word)</b> która zwraca true/false jeżeli w tekście <code>txt</code> znajduje się szukane słowo <code>word</code> check("ala ma kota", "kota")
+              ---> true
+            </li>
+            <li>
+              <b>getCount(txt)</b> Zwraca liczbę liter w tekście <code>txt</code>. Uwaga znaki interpunkcyjne też traktujmy jako litery. getCount("ala ma kota")
+              ---> 11
+            </li>
+            <li>
+              <b>getWordsCount(txt)</b> zwraca liczbę słów w przekazanym tekście. getWordsCount("Ala ma kota")
+              ---> 3
+            </li>
+            <li>
+              <b>setCapitalize(txt)</b> zwraca nowy tekst tak zamieniony, że każde słowo zaczyna się z dużej litery. setCapitalize("ala ma kota")
+              ---> "Ala Ma Kota"
+            </li>
+            <li>
+              <b>setMix(txt)</b> zwraca nowy tekst z naprzemiennie dużymi/małymi literami. Spację i znaki interpunkcyjne traktujemy jako litery. setMix("ala ma kota")
+              ---> "aLa mA KoTa"
+            </li>
+            <li>
+              <b>generateRandom(lng)</b> Generuje tekst o długości lng który składa się z losowych liter. generateRandom(10)
+              ---> "dkjiuhtjox"
+            </li>
+          </ol>
+          
+          
+          <div class="button">
+            <button class="button__click button__objectsFirst7--js">Klik</button>
+          </div>
+
+
     </article>
   </section>
 
