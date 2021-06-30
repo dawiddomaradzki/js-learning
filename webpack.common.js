@@ -12,6 +12,7 @@ module.exports = {
     caesarCipher: "./src/js/caesarCipher.js",
     arraysUsers: "./src/js/arraysUsers.js",
     arraysCities: "./src/js/arraysCities.js",
+    objectsFirst: "./src/js/objectsFirst.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -92,6 +93,7 @@ module.exports = {
         "caesarCipher",
         "arraysUsers",
         "arraysCities",
+        "objectsFirst",
       ],
       filename: "index.html",
     }),
