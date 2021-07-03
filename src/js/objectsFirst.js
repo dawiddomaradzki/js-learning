@@ -56,3 +56,27 @@ objectsFirstTask2.addEventListener("click", (e) => {
   currentUser.show();
   currentUser.setActive(false);
 });
+
+// objectsFirst task #3 //
+const objectsFirstTask3 = document.querySelector(".button__objectsFirst3--js");
+
+const book = {
+  title: "Wiedźmin",
+  author: "Andrzej Sapkowski",
+  pageCount: 666,
+  publisher: "Znak",
+  showDetails() {
+    for (const key in book) {
+      if (typeof book[key] !== "function") {
+        console.log(`${key} ${book[key]}`);
+      }
+    }
+  },
+};
+
+objectsFirstTask3.addEventListener("click", (e) => {
+  book.showDetails();
+  console.log(Object.keys(book));
+  console.log(Object.values(book));
+  console.log(Object.entries(book));
+});
