@@ -80,3 +80,67 @@ objectsFirstTask3.addEventListener("click", (e) => {
   console.log(Object.values(book));
   console.log(Object.entries(book));
 });
+
+// objectsFirst task #4 //
+const objectsFirstTask4 = document.querySelector(".button__objectsFirst4--js");
+
+let getPlanet = () => {
+  let objectsFirstTask4Planet = document.getElementById(
+    "objectsFirst4_0Input"
+  ).value;
+  return objectsFirstTask4Planet;
+};
+
+let getDistance = () => {
+  let objectsFirstTask4Distance = document.getElementById(
+    "objectsFirst4_1Input"
+  ).value;
+
+  let distanceNumber = parseInt(objectsFirstTask4Distance);
+  return distanceNumber;
+};
+
+const spaceShip = {
+  name: "Enterprise",
+  currentLocation: "Earth",
+  flyDistance: 0,
+  flyTo(place, distance) {
+    this.currentLocation = place;
+    this.flyDistance += distance;
+  },
+  showInfo() {
+    return console.log(
+      `Statek ${this.name} doleciał do miejsca ${this.currentLocation}. Statek przeleciał już całkowity dystans ${this.flyDistance}.`
+    );
+  },
+  meetClingon() {
+    let lose = 0;
+    let win = 0;
+
+    for (let i = 0; i < 100; i++) {
+      if (Math.round(Math.random()) == 0) {
+        lose += 1;
+      } else {
+        win += 1;
+      }
+    }
+
+    if (lose < win) {
+      return console.log(
+        `Statek ${this.name} będący w okolicy ${this.currentLocation} zwycięsko wyszedł ze spotkania z Klingonami. Lose: ${lose}, Win: ${win}`
+      );
+    } else if (lose == win) {
+      return console.log(`W sumie remis czyli luz. Lose: ${lose}, Win: ${win}`);
+    } else if (lose > win) {
+      return console.log(
+        `Statek ${this.name} będący w okolicy ${this.currentLocation} został pokonany przez Klingonów. Lose: ${lose}, Win: ${win}`
+      );
+    }
+  },
+};
+
+objectsFirstTask4.addEventListener("click", (e) => {
+  spaceShip.flyTo(getPlanet(), getDistance());
+  spaceShip.showInfo();
+  spaceShip.meetClingon();
+});
