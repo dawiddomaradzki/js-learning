@@ -144,3 +144,5 @@ objectsFirstTask4.addEventListener("click", (e) => {
   spaceShip.showInfo();
   spaceShip.meetClingon();
 });
+
+// objectsFirst task #5 //
