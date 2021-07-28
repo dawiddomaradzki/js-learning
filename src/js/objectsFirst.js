@@ -146,3 +146,92 @@ objectsFirstTask4.addEventListener("click", (e) => {
 });
 
 // objectsFirst task #5 //
+const objectsFirstTask5 = document.querySelector(".button__objectsFirst5--js");
+
+let getName = () => {
+  let objectsFirstTask5Name = document.getElementById(
+    "objectsFirst5_0Input"
+  ).value;
+  return objectsFirstTask5Name;
+};
+
+let getAge = () => {
+  let objectsFirstTask5Age = document.getElementById(
+    "objectsFirst5_1Input"
+  ).value;
+
+  let age = parseInt(objectsFirstTask5Age);
+  return age;
+};
+
+let getNumber = () => {
+  let objectsFirstTask5Number = document.getElementById(
+    "objectsFirst5_2Input"
+  ).value;
+
+  let number = parseInt(objectsFirstTask5Number);
+  return number;
+};
+
+const books = {
+  users: [],
+  addUser(name, age, phone) {
+    const user = {
+      name,
+      age,
+      phone,
+    };
+
+    return this.users.push(user);
+  },
+
+  showUsers() {
+    for (var { name: n } of this.users) {
+      console.log("Name: " + n);
+    }
+  },
+
+  findByName(input) {
+    const findUser = this.users.find((user) => {
+      return user.name == input;
+    });
+
+    if (findUser == undefined) {
+      console.log("nie ma takiego uzytkownika");
+    } else {
+      console.log(findUser);
+    }
+  },
+
+  findByPhone(input) {
+    const findUser = this.users.find((user) => {
+      return user.phone == input;
+    });
+
+    if (findUser == undefined) {
+      console.log("nie ma takiego numeru");
+    } else {
+      console.log(findUser);
+    }
+  },
+
+  getCount() {
+    let count = 0;
+
+    const findUser = this.users.forEach(() => {
+      count += 1;
+    });
+    findUser;
+    console.log(count);
+  },
+};
+
+objectsFirstTask5.addEventListener("click", (e) => {
+  console.log(getName(), getAge(), getNumber());
+  books.addUser(getName(), getAge(), getNumber());
+  console.log(books.users);
+  books.showUsers();
+  books.findByName("name");
+  books.findByPhone("0");
+  books.getCount();
+});
