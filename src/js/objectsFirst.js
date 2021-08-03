@@ -145,7 +145,7 @@ objectsFirstTask4.addEventListener("click", (e) => {
   spaceShip.meetClingon();
 });
 
-// objectsFirst task #5 //
+// objectsFirst task #5 ///
 const objectsFirstTask5 = document.querySelector(".button__objectsFirst5--js");
 
 let getName = () => {
