@@ -742,30 +742,38 @@ Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są p
           <p>
             Stwórz obiekt o nazwie <b>tableGenerator</b>. Obiekt ten powinien mieć tylko metody:
           </p>
-          <p><b>Właściwości:</b></p>
-          <ul>
-            <li>
-              <b>users</b> która będzie tablicą użytkowników (na początku pusta)
-            </li>
-          </ul>
           <p><b>Metody:</b></p>
           <ul>
             <li>
-              <b>addUser(name, age, phone)</b> która doda to tablicy <code>users</code> nowy obiekt, który będzie miał klucze: name, age, phone z przekazanymi do tej funkcji danymi
+              <b>randomNumber(min, max)</b> zwraca losową liczbę z przedziału <code>min-max</code>
             </li>
             <li>
-              <b>showUsers()</b> która po odpaleniu wypisze w konsoli tekst: <code>Wszyscy użytkownicy w książce</code> a następnie w pętli wypisze wszystkich użytkowników
+              <b>generateIncTable(lng)</b>zwraca nową tablicę o długości <code>lng</code> z liczbami od 0 do lng.
             </li>
             <li>
-              <b>findByName(name)</b> która wypisze w konsoli pierwszego użytkownika, który ma szukane imię lub false jeżeli nie znajdzie.
+              <b>generateRandomTable(lng, min, max)</b> zwraca nową tablice o długości <code>lng</code> z losowymi liczbami z przedziału <code>min-max</code>
             </li>
             <li>
-              <b>findByPhone(phone)</b> która wypisze w konsoli pierwszego użytkownika, który ma szukany telefon lub false jeżeli nie znajdzie
+              <b>generateTableFromText(str)</b> generuje nową tablicę ze słowami z tekstu str Jeżeli przekazany tekst nie jest tekstem, wtedy powinna być zwrócona pusta tablica Wykorzystaj odpowiednią metodę dla stringów (szukaj na "mdn js string")
             </li>
             <li>
-              <b>getCount()</b> która wypisze ile jest użytkowników w tabeli
+              <b>getMaxFromTable(arr)</b> zwraca największą liczbę z tablicy <code>arr</code>
+            </li>
+            <li>
+              <b>getMinFromTable(arr)</b> zwraca najmniejszą liczbę z tablicy <code>arr</code>
+            </li>
+            <li>
+              <b>delete(arr, index)</b> usuwa z tablicy <code>arr</code> element o indexie <code>index</code>
             </li>
           </ul>
+          <label for="objectsFirst6_0Input">Wprowadź min</label>
+          <input type="number" placeholder="Wpowadź numer" name="objectsFirst6_0Input" id="objectsFirst6_0Input" value=0>
+      
+          <label for="objectsFirst6_1Input">Wprowadź max</label>
+          <input type="number" placeholder="Wpowadź numer" name="objectsFirst6_1Input" id="objectsFirst6_1Input" value=0>
+        
+          <label for="objectsFirst6_2Input">Wprowadź lng</label>
+          <input type="number" placeholder="Wpowadź numer" name="objectsFirst6_2Input" id="objectsFirst6_2Input" value=0>
           <div class="button">
             <button class="button__click button__objectsFirst6--js">Klik</button>
           </div>

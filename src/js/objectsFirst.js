@@ -235,3 +235,93 @@ objectsFirstTask5.addEventListener("click", (e) => {
   books.findByPhone("0");
   books.getCount();
 });
+
+// objectsFirst task #6 //
+const objectsFirstTask6 = document.querySelector(".button__objectsFirst6--js");
+
+let getNumberMin = () => {
+  let objectsFirstTask6Number = document.getElementById(
+    "objectsFirst6_0Input"
+  ).value;
+
+  let number = parseInt(objectsFirstTask6Number);
+  return number;
+};
+let getNumberMax = () => {
+  let objectsFirstTask6Number = document.getElementById(
+    "objectsFirst6_1Input"
+  ).value;
+
+  let number = parseInt(objectsFirstTask6Number);
+  return number;
+};
+let getLng = () => {
+  let objectsFirstTask6Number = document.getElementById(
+    "objectsFirst6_2Input"
+  ).value;
+
+  let number = parseInt(objectsFirstTask6Number);
+  return number;
+};
+
+const tableGenerator = {
+  minmaxArray: [],
+
+  randomNumber(min, max) {
+    console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+  },
+
+  generateIncTable(lng) {
+    let lngArray = [];
+    for (let i = 0; i <= lng; i++) {
+      lngArray += [i];
+    }
+
+    console.log(lngArray.split(""));
+    return lngArray.split("");
+  },
+
+  generateRandomTable(lng, min, max) {
+    for (let i = 0; i <= lng; i++) {
+      this.minmaxArray.push(Math.floor(Math.random() * (max - min + 1)) + min);
+    }
+    console.log(this.minmaxArray);
+  },
+
+  generateTableFromText(str) {
+    const strSplited = str.split(" ");
+    let newStr = [];
+    let isnum = /^\d+$/.test(str.replace(/\s/g, ""));
+    isnum;
+    for (let i = 0; i < strSplited.length; i++) {
+      if (str === "" || isnum === true) {
+        newStr = [];
+      } else {
+        newStr.push(strSplited[i]);
+      }
+    }
+    console.log(newStr);
+  },
+
+  getMaxFromTable() {
+    console.log(Math.max.apply(null, this.minmaxArray));
+  },
+  getMinFromTable() {
+    console.log(Math.min.apply(null, this.minmaxArray));
+  },
+  delete(index) {
+    delete this.minmaxArray.splice(index, 1);
+    console.log(this.minmaxArray);
+  },
+};
+
+objectsFirstTask6.addEventListener("click", (e) => {
+  console.log(getNumberMin(), getNumberMax(), getLng());
+  tableGenerator.randomNumber(getNumberMin(), getNumberMax());
+  tableGenerator.generateIncTable(getLng());
+  tableGenerator.generateRandomTable(getLng(), getNumberMin(), getNumberMax());
+  tableGenerator.generateTableFromText("Just some text");
+  tableGenerator.getMaxFromTable();
+  tableGenerator.getMinFromTable();
+  tableGenerator.delete(0);
+});
